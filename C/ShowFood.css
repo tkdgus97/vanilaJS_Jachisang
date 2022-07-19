@@ -1,0 +1,234 @@
+@font-face { 
+    font-family: 'Cafe24Oneprettynight'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+* {
+    font-family: Cafe24Oneprettynight;
+    box-sizing: border-box;
+}
+html{  
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+a:link { color: white; }
+a:visited { color: white; }
+/* 화면 전체 container 속성 값 */
+.container{
+    height: 100%;
+    opacity: 0.9;
+    animation: fadein 0.5s linear;
+}
+/* -------------------------- */
+/* ------------head부분----------- */
+.container .head{
+    text-align: center;
+    float: left;
+    background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+    opacity: 0.8;
+    width: 20%;
+    height: 100%;
+}
+.container .head h1{
+    color: white;
+    font-size: 37px;
+    margin: 0;
+    margin-top: 50px;
+    opacity: 1;
+    height: 10%;
+}
+.container .head .ic-left{
+    box-sizing: content-box;
+    margin-right: 5px;
+}
+.container .head .ic-right{
+    box-sizing: content-box;
+    margin-left: 5px;
+}
+/* --------------head end-------------- */
+/* -------------UserInfo css------------- */
+.UserNtime{
+    display: flex;
+    height: 4%;
+}
+.UserInfo, .TimeInfo{
+    margin: 10px;
+    font-size: 20px;
+}
+.UserInfo{
+    width: 49%;
+    border-right: 1px solid gainsboro;
+}
+/* .UserInfo i{
+    font-size: 20px;
+} */
+.TimeInfo{
+    width: 40%;
+}
+/* ------------------------------------ */
+/* -------------menu bar--------------- */
+.head .Menubar{
+    font-size: 23px;
+    margin-top: 20px;
+    text-align: center;
+    cursor: default;
+}
+.Menubar .menuList{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    animation-name: dropdown;
+    animation-timing-function: linear;
+    animation-duration: 0.8s;
+}
+
+
+.menuList > li{
+    margin-top: 7px;
+    font-size: 19px;
+    transition: height 0.5s ease-in;
+}
+/* ------------------------------------ */
+
+/* ----------------Maintext--------------- */
+/* ------초기 화면은 슬라이드의 구성-------  */
+.Maintext{
+    width: 80%;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+.SliderBox{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.recommend{
+    font-size: 30px;
+    color: gray;
+    border: 1px solid rgb(105, 105, 105);
+    display: inline-block;
+    width: 200px;
+    height: 65px;
+    position: absolute;
+    top: 6%;
+    left: 43%;
+    z-index: 1;
+    text-align: center;
+    padding-top: 15px;
+    background-color: white;
+    border-radius: 5px;
+    letter-spacing: 10px;
+}
+.outline{
+    position: relative;
+    width: 55%;
+    height: 80%;
+    border: 1px solid rgb(104, 104, 104);
+    background-color: white;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+}
+.Slider{
+    width: 70%;
+    height: 90%;
+    position: relative;
+    background-color: white;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+.Slider .slide-contain{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 0;
+    transition: margin-left 2s ease-in;
+}
+.Slider .slide-contain .slide-item{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+.slide-item:nth-child(1){
+    margin-left: 0;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 700px 700px;
+}
+.slide-item:nth-child(2){
+    margin-left: 100%;
+}
+.slide-item:nth-child(3){
+    margin-left: 200%;
+}
+.slide-item:nth-child(4){
+    margin-left: 300%;
+}
+.slide-item img{
+    width: 100%;
+    height: 85%;
+} 
+.slide-item .hashInfo{
+    width: 100%;
+    height: 15%;
+    background-color: white;
+    color: lightslategray;
+    font-size: 20px;
+    background-color: rgba(236, 236, 240, 0.5);
+}
+
+.iframeBox{
+    height: 100%;
+    width: 100%;
+    animation: fadein 1s linear;
+}
+
+/* ---------------------------------------- */
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.Menubar .hide{
+    display: none;
+}
+.Menubar .show{
+    display: block;
+}
+
+@keyframes dropdown{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+    }
+}

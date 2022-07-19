@@ -1,0 +1,156 @@
+@font-face { 
+    font-family: 'Cafe24Oneprettynight'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+* {
+    font-family: Cafe24Oneprettynight;
+    box-sizing: border-box;
+}
+html{  
+    height: 100%;
+}
+body{
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+}
+/* 화면 전체 container 속성 값 */
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+}
+/* container 안 아이템들 전체 적용 속성 */
+.container .item {
+    flex-grow: 1;
+}
+
+/* ------------아이템 중 head 부분 속성------------ */
+.container .head{
+    text-align: center;
+}
+.container .head h1{
+    color: white;
+    font-size: 40px;
+    margin: 0;
+    margin-top: 70px;
+}
+.container .head .ic-left{
+    box-sizing: content-box;
+    margin-right: 10px;
+}
+.container .head .ic-right{
+    box-sizing: content-box;
+    margin-left: 10px;
+}
+/* ------------------------------------------------ */
+
+/* ---------------페이지 시작 css-----------------
+아이템 중 중간 메인부분 대부분 메인 부분이 바뀝니다.*/
+.container .main {
+    position: relative;
+    display: flex;
+    height: 90%;
+    align-items: center;
+    justify-content: center;
+    animation: fadein 1s linear;
+}
+#ShowMain{
+    position: absolute;
+    width: 20%;
+    font-size: 1.5rem;
+    top: 30%;
+}
+
+#ShowMain input{
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: inherit;
+    outline: 0;
+    appearance: none;
+    text-align: start;
+    border-bottom: 3px solid white;
+    font-size: 30px;
+    animation: fadein 2s ease-in-out;
+}
+#Menudiv, ul{
+    display: flex;
+    position: absolute;
+    width: 565px;
+    height: 106px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadein 2s ease-in-out;
+}
+ul{
+    height: 30px;
+    transform: translate(-50%, 170%);
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style-type: none;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    width: 150px;
+    box-sizing: content-box;
+}
+#Menudiv .Menu-form{
+    display: flex;
+    flex-direction: row;
+}
+
+#Menudiv .Menu-form .icon-folder{
+    font-size: 80px;
+    color: white;
+    flex-grow: 1;
+    padding: 0px 15px;
+}
+
+/* ---------------레시피 설명 창 css-------------- */
+.Menubar{
+    background-color: white;
+    height: 10%;
+}
+
+/* 숨겨지는 항목들에 적용할 클래스 */
+#ShowMain .hide{
+    display: none;
+}
+#Menudiv .Menu-form .vibrate{
+    animation: vbr 1s infinite alternate;
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes vbr {
+    from {
+        margin-left:0px;
+        animation-timing-function: cubic-bezier(0.25, 0.01, 0.55, 0.16);
+    }
+    10% {
+        margin-left:2px;
+        animation-timing-function: cubic-bezier(0.52, 0.44, 0.47, 0.44);
+    }
+    30% {
+        margin-left:-2px;
+        animation-timing-function: cubic-bezier(0.53, 0.56, 0.48, 0.56);
+    }
+    50% {
+        margin-left:0px;
+        animation-timing-function: cubic-bezier(0.45, 0.84, 0.75, 0.99);
+    }
+}
